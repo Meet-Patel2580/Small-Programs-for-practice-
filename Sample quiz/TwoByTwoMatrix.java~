@@ -1,0 +1,9 @@
+public testMatrix{
+  public static void main(String[]args){
+  
+  TwoByTwoMatrix testDeterminant= new TwoByTwoMatrix(1,2,3,4);
+  System.out.println(testDeterminant.determinant());
+  
+  
+  }
+}

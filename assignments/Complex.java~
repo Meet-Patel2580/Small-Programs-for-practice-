@@ -1,0 +1,7 @@
+public class Complex{
+
+int a;  // real part "a"
+int b;  // imaginary part "b"
+
+}
+

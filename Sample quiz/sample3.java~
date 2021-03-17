@@ -1,0 +1,20 @@
+public class sample3{
+  public static void main (String []args){
+   
+    checkInt(12345)
+  }
+  public static boolean checkInt(String checkForDigit){
+    int numDigits= 0;
+    
+    for(int i=0;i<checkForDigit.length();i++){
+      if (Character.isDigit(checkForDigit.charAt(i))){
+        numDigits++;
+      }
+      else
+        return false;
+      if (numDigits==checkForDigit.length()-1);
+      return true;
+    }
+  
+  }
+}

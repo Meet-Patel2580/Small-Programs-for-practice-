@@ -1,0 +1,55 @@
+class OrderedPair{
+  
+  double x;           //x-coordinate of the ordered pair
+  private double y;   //y-coordinate of the ordered pair
+
+  public OrderedPair(){
+    x=0.0;
+    y=0.0;
+  }
+  
+  public OrderedPair(double x, double y){
+    this.x=x;
+    this.y=y;
+  }
+  
+  public String toString(){
+    return "("+x+", "+y+")";
+  }
+  
+  public double getSlope(OrderedPair other){
+    return (other.x-this.x)/(other.y-this.y);
+  }
+  
+  public OrderedPair midpoint(OrderedPair other){
+    return new OrderedPair((this.x+other.x)/2,(this.y+other.y)/2);
+  }
+  
+  public boolean equals(OrderedPair other){
+    return (roundThreeDecimals(this.x)==roundThreeDecimals(other.x))&&(roundThreeDecimals(this.y)==roundThreeDecimals(other.y));
+  }
+  
+  public double getY(){
+    return this.y;
+  }
+  
+  public void setY(double new){
+    this.y=new;
+    return new;
+  }
+  
+  public static double distance(OrderedPair point1, OrderedPair point2){
+    return Math.sqrt(Math.pow(point2.x-point1.x,2)+Math.pow(point2.y-point1.y,2));
+  }
+    
+  /**
+   * This method takes a dobuble value and rounds it to 3 decimal places and returns the rounded double value.
+   * @param num  - input original double value 
+   * @return original double value rounded to 3 decimal places. 
+   */
+  public static double roundThreeDecimals(double num){
+    double roundedNum=(Math.round(num*1000))/1000.0;
+    return roundedNum;
+  }
+  
+}
